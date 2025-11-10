@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elegant Scents - Perfume Shop</title>
+  <link rel="stylesheet" href="./project.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Elegant Scents</h1>
+      <nav>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#cart" id="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Discover Your Signature Scent</h2>
+      <p>Premium perfumes crafted to perfection.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products" class="container products-section">
+    <h2>Our Perfumes</h2>
+    <div class="products-grid" id="products-grid">
+      <!-- Perfume items inserted by JavaScript -->
+    </div>
+  </section>
+
+  <section id="about" class="container about-section">
+    <h2>About Elegant Scents</h2>
+    <p>
+      Elegant Scents offers a curated selection of luxurious perfumes for every occasion. Crafted by
+      master perfumers, our scents evoke elegance, confidence, and individuality.
+    </p>
+  </section>
+
+  <section id="cart" class="container cart-section hidden">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <strong>Total:</strong> $<span id="cart-total">0.00</span>
+    </div>
+    <button id="checkout-btn" class="btn">Checkout</button>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Elegant Scents. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./project.js"></script>
+</body>
+</html>

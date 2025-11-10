@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="./calculate.css" />
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled />
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="backspace()">⌫</button>
+      <button onclick="appendOperator('(')">(</button>
+      <button onclick="appendOperator(')')">)</button>
+
+      <!-- Row 2 -->
+      <button onclick="appendOperator('sin(')">sin</button>
+      <button onclick="appendOperator('cos(')">cos</button>
+      <button onclick="appendOperator('tan(')">tan</button>
+      <button onclick="appendOperator('^')">^</button>
+
+      <!-- Row 3 -->
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="appendOperator('/')">÷</button>
+
+      <!-- Row 4 -->
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="appendOperator('*')">×</button>
+
+      <!-- Row 5 -->
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="appendOperator('-')">-</button>
+
+      <!-- Row 6 -->
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendOperator('.')">.</button>
+      <button onclick="appendOperator('%')">%</button>
+      <button onclick="appendOperator('+')">+</button>
+
+      <!-- Row 7 -->
+      <button onclick="appendOperator('log(')">log</button>
+      <button onclick="appendOperator('sqrt(')">√</button>
+      <button onclick="appendOperator('Math.PI')">π</button>
+      <button onclick="calculate()" id="equals">=</button>
+    </div>
+  </div>
+<!--.......problem solve  class work...... -->
+  <script src="./calculate.js"></script>
+</body>
+</html>
+<input id="myInput" type="text" placeholder="Type something" />
+<button onclick="handleClick(event)">Click me</button>
+<p id="output"></p>
+
+<script>
+  function handleClick(event) {
+    const input = document.getElementById('myInput');
+    const output = document.getElementById('output');
+    output.textContent = 'You typed: ' + input.value;
+  }
+</script>
+<!-- .....problem 2..... -->
+ <input type="text" id="myInput" placeholder="Enter a color" />
+<button onclick="checkColor()">Check Color</button>
+<p id="result"></p>
+
+<script>
+function checkColor() {
+  const input = document.getElementById('myInput').value.toLowerCase();
+  const result = document.getElementById('result');
+
+  switch (input) {
+    case 'red':
+      result.textContent = 'You chose red!';
+      break;
+    case 'blue':
+      result.textContent = 'You chose blue!';
+      break;
+    case 'green':
+      result.textContent = 'You chose green!';
+      break;
+    default:
+      result.textContent = "Sorry, I don't recognize that color.";
+  }
+}
+</script>

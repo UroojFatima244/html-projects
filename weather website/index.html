@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Weather Forecast App</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🌤 3D Weather Forecast</h1>
+
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Enter city name..." />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="weather-card" class="hidden">
+      <div class="weather-info">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" alt="Weather Icon" />
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="humidity"></p>
+      </div>
+    </div>
+
+    <p id="error-message" class="error hidden">❌ City not found. Try again.</p>
+  </div>
+
+  <script src="./weather.js"></script>
+</body>
+</html>
